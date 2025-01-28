@@ -1,5 +1,5 @@
 // Shared Components
-export { Button } from "./shared/button";
+export { IconButton } from "./shared/icon-button";
 
 // Stopwatch Components
 export { ButtonsSection } from "./stopwatch/buttons-section";

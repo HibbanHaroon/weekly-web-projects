@@ -3,5 +3,5 @@ interface Props {
 }
 
 export function Timer(props: Props) {
-  return <div>{props.time}</div>;
+  return <p className="text-8xl font-semibold">{props.time}</p>;
 }

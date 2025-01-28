@@ -1,5 +1,10 @@
-import { Button } from "@/app/_components";
+import { IconButton } from "@/app/_components";
 import { MouseEventHandler } from "react";
+import {
+  PlayIcon,
+  PauseIcon,
+  ArrowPathIcon,
+} from "@heroicons/react/24/outline";
 
 interface Props {
   isTicking: boolean;
@@ -10,18 +15,18 @@ interface Props {
 
 export function ButtonsSection(props: Props) {
   return (
-    <div>
-      <Button
-        label="Start"
+    <div className="flex flex-row gap-4 mt-12">
+      <IconButton
+        icon={<PlayIcon />}
         onClick={props.onStart}
         disabled={props.isTicking}
-      ></Button>
-      <Button
-        label="Stop"
+      ></IconButton>
+      <IconButton
+        icon={<PauseIcon />}
         onClick={props.onStop}
         disabled={!props.isTicking}
-      ></Button>
-      <Button label="Reset" onClick={props.onReset}></Button>
+      ></IconButton>
+      <IconButton icon={<ArrowPathIcon />} onClick={props.onReset}></IconButton>
     </div>
   );
 }

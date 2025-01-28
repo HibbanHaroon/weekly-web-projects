@@ -9,7 +9,7 @@ export function useTime() {
     let interval = null;
     if (isTicking) {
       interval = setInterval(() => {
-        setTime(time + 1);
+        setTime((prevTime) => prevTime + 1);
       }, 1000);
     }
 
@@ -18,7 +18,7 @@ export function useTime() {
         clearInterval(interval);
       }
     };
-  }, [isTicking, time]);
+  }, [isTicking]);
 
   function handleStart() {
     setIsTicking(true);

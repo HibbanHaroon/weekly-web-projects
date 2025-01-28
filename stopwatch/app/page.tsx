@@ -6,14 +6,14 @@ import { useTime } from "@/app/_hooks";
 export default function Home() {
   const { time, isTicking, handleStart, handleStop, handleReset } = useTime();
   return (
-    <div>
+    <div className="h-screen flex flex-col justify-center items-center">
+      <Timer time={time}></Timer>
       <ButtonsSection
         isTicking={isTicking}
         onStart={handleStart}
         onStop={handleStop}
         onReset={handleReset}
       ></ButtonsSection>
-      <Timer time={time}></Timer>
     </div>
   );
 }
